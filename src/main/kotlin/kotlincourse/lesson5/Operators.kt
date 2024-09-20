@@ -1,6 +1,5 @@
 package org.example.kotlincourse.lesson5
 
-class Operators {
     fun main() {
         val sum = "5" + "3"
         val dif = 10 - 5
@@ -21,4 +20,3 @@ class Operators {
 
         println(orResult)
     }
-}
