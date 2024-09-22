@@ -1,22 +1,30 @@
 package org.example.kotlincourse.lesson5
 
-    fun main() {
-        val sum = "5" + "3"
-        val dif = 10 - 5
-        val product = 10 * 5
-        val quotient = 10 % 5
-        val reminder = 10 % 6
-        val isEqual = (5 == 5)
-        val isNotEqual = (5 != 5)
-        val isGreater = (5 > 4)
-        val andResult = true && true //true only when both are true
-        val orResult = true || false
-        val notResult = !(5 > 3)
-        var number = 5
-        number += 2
-        number -= 3
+fun main() {
+    val sum = "5" + "3"
+    val dif = 10 - 5
+    val product = 10 * 5
+    val quotient = 10 % 5
+    val reminder = 10 % 6
+    val isEqual = (5 == 5)
+    val isNotEqual = (5 != 5)
+    val isGreater = (5 > 4)
+    val andResult = true && true //true only when both are true
+    val orResult = true || false
+    val notResult = !(5 > 3)
+    var number = 5
+    number += 2
+    number -= 3
+    number /= 2
+    number++
+    --number
 
-
-
-        println(orResult)
-    }
+    //  ELVIS
+    var name: String? = null
+    val result = name ?: "Unknown"
+    /* val res = if (name==null){
+     "Unknown"
+            }else {name}*/
+    val result2 = name ?: IllegalArgumentException("Не может быть null")
+    println(number)
+}
