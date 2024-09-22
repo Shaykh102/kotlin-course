@@ -57,72 +57,64 @@ fun main4() {
     if (purchase <= 1000) {
         bonusAmount = (purchase / 100 * 2)
     } else {
-        bonusAmount = (purchaseAmount  / 100 * 5)
-    } println(bonusAmount)
+        bonusAmount = (purchaseAmount / 100 * 5)
+    } println (bonusAmount)
 }
 
 
 //Задание 5: "Определение Типа Документа"
 //Контекст: В системе хранения документов каждый файл имеет расширение. Напишите функцию, которая на основе расширения файла возвращает его тип: "Текстовый документ", "Изображение", "Таблица" или "Неизвестный тип".
 
-fun main4() {
-    var purchase: Int = 1
-    var bonusAmount: Int = 1
-    if (purchase < 0) {
-        throw IllegalArgumentException("Invalid Purchase")
-    }
-    if (purchase <= 1000) {
-        bonusAmount = (purchase / 100 * 2)
-    } else {
-        bonusAmount = (purchaseAmount  / 100 * 5)
-    } println(bonusAmount)
-}
+fun main5() {
+    var fileType1: String = "txt"
+
+    if (fileType1 == "txt") {
+        println("Текстовый документ")
+    } else if (fileType1 == "png") {
+        println("Изображение")
+    } else if (fileType1 == "csv") {
+        println("Таблица")
+    } else println("Неизвестный тип")
 
 //Задание 6: "Конвертация Температуры"
 //Контекст: Создайте функцию, которая конвертирует температуру из градусов Цельсия в Фаренгейты и наоборот в зависимости от указанной единицы измерения (C/F). Единицу измерения нужно передать вторым аргументом функции. Несколько аргументов передаются через запятую. Возвращать нужно строку.
 
-fun main4() {
-    var purchase: Int = 1
-    var bonusAmount: Int = 1
-    if (purchase < 0) {
-        throw IllegalArgumentException("Invalid Purchase")
+    fun main6() {
+        val Celcius: Boolean = 1
+        var temp: Double = 1.0
+        if (Celcius = true) {
+            temp = (temp * 1.8) + 32
+        } else {
+            temp = (temp - 32) / 1.8
+        } println (temp)
     }
-    if (purchase <= 1000) {
-        bonusAmount = (purchase / 100 * 2)
-    } else {
-        bonusAmount = (purchaseAmount  / 100 * 5)
-    } println(bonusAmount)
-}
 
 //Подсказка: для генерации строки из числа и буквы можно использовать шалон “$result F” для фаренгейта или “$result C” для цельсия
 //Задание 7: "Подбор Одежды по Погоде"
 //Контекст: Напишите функцию, которая на основе температуры воздуха рекомендует тип одежды: "куртка и шапка" при температуре ниже 0, "ветровка" от 0 до 15 градусов и "футболка и шорты" при температуре выше 15. При температурах ниже -30 и выше +35 рекомендуйте не выходить из дома.
 
-fun main4() {
-    var purchase: Int = 1
-    var bonusAmount: Int = 1
-    if (purchase < 0) {
-        throw IllegalArgumentException("Invalid Purchase")
+    fun main7() {
+        val temp: Int = 1
+        when {
+            temp in -30..0 -> println("куртка и шапка")
+            temp in 0..15 -> println("ветровка")
+            temp in 16..34 -> println("футболка и шорты")
+            else -> println("Stay home")
+        }
     }
-    if (purchase <= 1000) {
-        bonusAmount = (purchase / 100 * 2)
-    } else {
-        bonusAmount = (purchaseAmount  / 100 * 5)
-    } println(bonusAmount)
-}
 
 //Задание 8: "Выбор Фильма по Возрасту"
 //Контекст: Кинотеатр предлагает фильмы разных возрастных категорий. Напишите функцию, которая принимает возраст зрителя и возвращает доступные для него категории фильмов: "детские", "подростковые", "18+".
 
-fun main4() {
-    var purchase: Int = 1
-    var bonusAmount: Int = 1
-    if (purchase < 0) {
-        throw IllegalArgumentException("Invalid Purchase")
+    fun main8() {
+        val age: Int = 1
+        var cinemaCategory: String = "movie"
+        if (age < 4, age > 100){
+            println("Invalid Age")
+        }
+        when {
+            age in 4..12 -> cinemaCategory = "Детский"
+            age in 13..17 -> cinemaCategory = "Подростковый"
+            age in 18..100 -> cinemaCategory = "18+"
+        }
     }
-    if (purchase <= 1000) {
-        bonusAmount = (purchase / 100 * 2)
-    } else {
-        bonusAmount = (purchaseAmount  / 100 * 5)
-    } println(bonusAmount)
-}
