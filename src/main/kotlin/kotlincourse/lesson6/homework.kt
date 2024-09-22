@@ -2,37 +2,39 @@ package org.example.kotlincourse.lesson6
 
 //В каждом задании также нужно валидировать входящие данные, если это имеет смысл.
 //Задание 1: "Определение Сезона"
-fun main() {
-    val month: Int = 1
+//Контекст: Напишите функцию, которая на основе номера месяца возвращает сезон года.
+
+fun main2() {
+    val month: Int = 12
     when {
-        month in 1..2, 12 -> println("Winter")
+        month in 1..2 -> println("Winter")
         month in 3..5 -> println("spring")
         month in 6..8 -> println("Summer")
         month in 9..11 -> println("Autumn")
+        month == 12 -> println("Winter")
         else -> println("Unknown month")
     }
 }
 
-////Контекст: Напишите функцию, которая на основе номера месяца возвращает сезон года.
 //Задание 2: "Расчет Возраста Питомца"
 //Контекст: Создайте функцию, которая преобразует возраст собаки в "человеческие" годы. До 2 лет каждый год собаки равен 10.5 человеческим годам, после - каждый год равен 4 человеческим годам.
 
-fun main2() {
-    var humAge: Double = 1.0
+fun main() {
+    val humAge: Double = 1.0
     var dogAge: Double = 1.0
-    if (dogAge < 0) {
-        throw IllegalArgumentException("Invalid Dog Age")
-    }
+    /* if (dogAge <=0) {
+         throw IllegalArgumentException("Invalid Dog Age")
+     }*/
     if (humAge < 2) {
         dogAge == 10.5
     } else dogAge = humAge * 4
-    prinlt(dogAge)
+    println(dogAge)
 }
 
 //Задание 3: "Определение Вида Транспорта"
 //Контекст: Напишите функцию, которая определяет, какой вид транспорта лучше использовать, исходя из длины маршрута. Если маршрут до 1 км - "пешком", до 5 км - "велосипед", иначе - "автотранспорт".
 fun main3() {
-    var distance: Int = 1
+    val distance: Int = 1
     if (distance < 0) {
         throw IllegalArgumentException("Invalid Distance")
     }
@@ -57,8 +59,9 @@ fun main4() {
     if (purchase <= 1000) {
         bonusAmount = (purchase / 100 * 2)
     } else {
-        bonusAmount = (purchaseAmount / 100 * 5)
-    } println (bonusAmount)
+        bonusAmount = (purchase / 100 * 5)
+    }
+    println(bonusAmount)
 }
 
 
@@ -80,13 +83,14 @@ fun main5() {
 //Контекст: Создайте функцию, которая конвертирует температуру из градусов Цельсия в Фаренгейты и наоборот в зависимости от указанной единицы измерения (C/F). Единицу измерения нужно передать вторым аргументом функции. Несколько аргументов передаются через запятую. Возвращать нужно строку.
 
     fun main6() {
-        val Celcius: Boolean = 1
+        var Celcius: Boolean = true
         var temp: Double = 1.0
-        if (Celcius = true) {
+        if (Celcius) {
             temp = (temp * 1.8) + 32
         } else {
             temp = (temp - 32) / 1.8
-        } println (temp)
+        }
+        println(temp)
     }
 
 //Подсказка: для генерации строки из числа и буквы можно использовать шалон “$result F” для фаренгейта или “$result C” для цельсия
@@ -108,13 +112,13 @@ fun main5() {
 
     fun main8() {
         val age: Int = 1
-        var cinemaCategory: String = "movie"
-        if (age < 4, age > 100){
+        if (age < 4 || age > 100) {
             println("Invalid Age")
         }
         when {
-            age in 4..12 -> cinemaCategory = "Детский"
-            age in 13..17 -> cinemaCategory = "Подростковый"
-            age in 18..100 -> cinemaCategory = "18+"
+            age in 4..12 -> println("Детский")
+            age in 13..17 -> println("Подростковый")
+            age in 18..100 -> println("18+")
         }
     }
+}
