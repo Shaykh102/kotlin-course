@@ -46,13 +46,12 @@ var j = 4; j-- < 4) && ((6+0 == 6) || (5 % 2 != 1))        // false && false  = 
 ====== */
 
 fun main() {
-    val startinhIntens: Double = 100.0
+    val startingIntens: Double = 100.0
     val slowCoef: Double? = null
-    val finalIntens: Double?
-    when {
-        slowCoef!! in 0.5..1.0 -> finalIntens = (startinhIntens * slowCoef)
-        else -> finalIntens = (startinhIntens * 0.5)
-    }
+    val finalIntens = slowCoef ?: 0.5
+
+    return startingIntens * slowCoef
+
     println(finalIntens)
 }
 
@@ -73,3 +72,14 @@ fun main2() {
 }
 
 /*Контекст: Вы проводите метеорологические измерения. Одним из важных показателей является атмосферное давление, которое должно быть зафиксировано. Лаборант приносит вам набор показателей, но по пути может что-нибудь потерять. Задача-сообщить об ошибке в случае отсутствия показаний атмосферного давления.*/
+fun atmosphere() {val atmosphericPressure: Double? = null
+
+val validPressure = 1013.25
+    fun checkAtmosphericPressure(pressure: Double?) {
+        if (pressure == null) {
+            println("Ошибка: отсутствуют показания атмосферного давления.")
+        } else {
+            println("Атмосферное давление зафиксировано: $pressure гПа.")
+        }
+    }
+}}
