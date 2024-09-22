@@ -80,8 +80,49 @@ fun main4() {
 
 //Задание 6: "Конвертация Температуры"
 //Контекст: Создайте функцию, которая конвертирует температуру из градусов Цельсия в Фаренгейты и наоборот в зависимости от указанной единицы измерения (C/F). Единицу измерения нужно передать вторым аргументом функции. Несколько аргументов передаются через запятую. Возвращать нужно строку.
+
+fun main4() {
+    var purchase: Int = 1
+    var bonusAmount: Int = 1
+    if (purchase < 0) {
+        throw IllegalArgumentException("Invalid Purchase")
+    }
+    if (purchase <= 1000) {
+        bonusAmount = (purchase / 100 * 2)
+    } else {
+        bonusAmount = (purchaseAmount  / 100 * 5)
+    } println(bonusAmount)
+}
+
 //Подсказка: для генерации строки из числа и буквы можно использовать шалон “$result F” для фаренгейта или “$result C” для цельсия
 //Задание 7: "Подбор Одежды по Погоде"
 //Контекст: Напишите функцию, которая на основе температуры воздуха рекомендует тип одежды: "куртка и шапка" при температуре ниже 0, "ветровка" от 0 до 15 градусов и "футболка и шорты" при температуре выше 15. При температурах ниже -30 и выше +35 рекомендуйте не выходить из дома.
+
+fun main4() {
+    var purchase: Int = 1
+    var bonusAmount: Int = 1
+    if (purchase < 0) {
+        throw IllegalArgumentException("Invalid Purchase")
+    }
+    if (purchase <= 1000) {
+        bonusAmount = (purchase / 100 * 2)
+    } else {
+        bonusAmount = (purchaseAmount  / 100 * 5)
+    } println(bonusAmount)
+}
+
 //Задание 8: "Выбор Фильма по Возрасту"
 //Контекст: Кинотеатр предлагает фильмы разных возрастных категорий. Напишите функцию, которая принимает возраст зрителя и возвращает доступные для него категории фильмов: "детские", "подростковые", "18+".
+
+fun main4() {
+    var purchase: Int = 1
+    var bonusAmount: Int = 1
+    if (purchase < 0) {
+        throw IllegalArgumentException("Invalid Purchase")
+    }
+    if (purchase <= 1000) {
+        bonusAmount = (purchase / 100 * 2)
+    } else {
+        bonusAmount = (purchaseAmount  / 100 * 5)
+    } println(bonusAmount)
+}
