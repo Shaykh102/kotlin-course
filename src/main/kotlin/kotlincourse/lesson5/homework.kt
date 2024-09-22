@@ -63,14 +63,14 @@
 //    =====
 //
 //    fun main() {
-//        val startinhIntens: Double = 100.0
+//        var insuranse: Double = 0.05
 //        val cargoCost: Double? = null
-//        val finalIntens: Double?
-//        if () {
-//            cargoCost in 0.5..1.0 -> finalIntens = (startinhIntens * cargoCost)
-//            else -> finalIntens = (startinhIntens * 0.5)
-//        }
-//        println(finalIntens)
+//        var finalCost: Double = 1.0
+
+//         if (cargoCost == null) {
+//           finalCost = (cargoCost + 50)
+//        } else finalCost =( cargoCost + cargoCost*insurance)
+//        println(finalCost)
 //    }
 //
 //    Контекст: Вы проводите метеорологические измерения. Одним из важных показателей является атмосферное давление, которое должно быть зафиксировано. Лаборант приносит вам набор показателей, но по пути может что-нибудь потерять. Задача-сообщить об ошибке в случае отсутствия показаний атмосферного давления.
